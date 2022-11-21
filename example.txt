@@ -1,0 +1,31 @@
+nfs_server {
+  path = "/jail/${name}";
+  host.hostname = "${name}";
+  allow.raw_sockets = 1;
+  allow.set_hostname = 1;
+  allow.sysvipc = 1;
+  mount.devfs;
+  exec.clean;
+  vnet;
+  vnet.interface = "e0b_${name}";
+  exec.prestart += "/usr/sbin/jib addm -b _bridge0 ${name} em0";
+  exec.poststop += "/usr/sbin/jib destroy ${name}";
+  exec.start += "/bin/sh /etc/rc";
+  exec.stop = "/bin/sh /etc/rc.shutdown";
+  exec.consolelog = "/var/log/jail_${name}_console.log";
+}
+
+
+/etc/devfs.rules --
+Code:
+
+[jail_devfs=110]
+add path 'bpf*' unhide
+
+-- /etc/jail.conf
+Code:
+
+FreeBSD {
+  devfs_ruleset="110";
+}
+
