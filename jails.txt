@@ -2,6 +2,42 @@ as root
 
 # config server
 
+/etc/rc.conf
+
+clear_tmp_enable="YES"
+syslogd_flags="-ss"
+sendmail_enable="NONE"
+sendmail_submit_enable="NO"
+sendmail_outbound_enable="NO"
+sendmail_msp_queue_enable="NO"
+update_motd="NO"
+
+
+hostname="devbox13"
+keymap="uk.kbd"
+ifconfig_em0="inet 192.168.1.10 netmask 255.255.255.0"
+defaultrouter="192.168.1.254"
+sshd_enable="YES"
+# Set dumpdev to "AUTO" to enable crash dumps, "NO" to disable
+dumpdev="NO"
+zfs_enable="YES"
+
+jail_enable="YES"
+jail_parallel_start="YES"
+
+# add jails to start at boot
+jail_list=""
+
+
+# setup bridge - do at run time??
+
+ifconfig bridge create name vnetdemobridge mtu 9000 up
+ifconfig epair$i create mtu 9000 up
+ifconfig vnetdemobridge addm epair${i}a edge epair${i}
+
+
+# create jails
+
 mkdir /usr/jails
 cd /usr/jails
 
@@ -10,8 +46,8 @@ ifconfig bridge create name vnetbridge mtu 9000 up
 # setup jails
 
 bsdinstall jail base
-
-tar -cvf base.tar base
+cd base
+tar -cvf ../base.tar *
 
 
 
@@ -37,8 +73,51 @@ rm -rf basebase
 5. 2 or jails with same ip, nested?
 6. smpd - send messages to check status switch etc
 7. each jail should have own zfs area
+8. use a script to create things
 
--------------------------------------------------------------------
+===================================================================
+
+# rc.conf
+
+clear_tmp_enable="YES"
+syslogd_flags="-ss"
+sendmail_enable="NONE"
+sendmail_submit_enable="NO"
+sendmail_outbound_enable="NO"
+sendmail_msp_queue_enable="NO"
+update_motd="NO"
+
+hostname="devbox13"
+keymap="uk.kbd"
+ifconfig_em0="inet 192.168.1.10 netmask 255.255.255.0"
+defaultrouter="192.168.1.254"
+sshd_enable="YES"
+# Set dumpdev to "AUTO" to enable crash dumps, "NO" to disable
+dumpdev="NO"
+zfs_enable="YES"
+
+jail_enable="YES"
+jail_parallel_start="YES"
+
+# add jails to start at boot
+jail_list=""
+
+ifconfig_bridge0="inet 10.0.0.1 netmask 0xffffff00 addm em1"
+ifconfig_em1="up"
+
+# config network at runtime?
+
+# add rules 110 for bpf
+
+/etc/devfs.rules
+[jail_devfs=110]
+add include $devfsrules_hide_all
+add include $devfsrules_unhide_basic
+add include $devfsrules_unhide_login
+#add path fuse unhide
+#add path zfs unhide
+add path 'bpf*' unhide
+
 
 # install scripts
 
@@ -237,6 +316,26 @@ tar -xvf base.tar -C wootton-and-wootton-bridge
 tar -xvf base.tar -C wroxall
 tar -xvf base.tar -C yaverland
 
+# start a jail etc
+
+ifconfig bridge0 create up
+ifconfig bridge0 inet 10.0.0.1 netmask 0xffffff00
+ifconfig bridge0 addm em1
+ifconfig em1 up
+
+ifconfig epair create 
+ifconfig bridge0 addm epair0a 
+	
+jail -c name=newport host.hostname=newport persist \
+      vnet vnet.interface=epair0b \
+      path=/usr/jails/newport devfs_ruleset=110 \
+      mount.devfs=true
+
+
+
+
+# shows all epairs
+ifconfig -g epair 
 
 
 
