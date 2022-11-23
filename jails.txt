@@ -1,0 +1,533 @@
+as root
+
+# config server
+
+mkdir /usr/jails
+cd /usr/jails
+
+ifconfig bridge create name vnetbridge mtu 9000 up
+
+# setup jails
+
+bsdinstall jail base
+
+tar -cvf base.tar base
+
+
+
+
+
+
+
+# delete jail direcory if needed
+
+chflags -R noschg basebase 
+rm -rf basebase
+
+
+
+
+# notes
+
+1. could byhive have jails with lots of interfaces?
+2. dont forget isp plus carriers! carriers supply diffrent areas, 
+   plus multiple options
+3. also openswitch or freebsd as a switch
+4. create cluster to test dhcp? etc, lease of 10 seconds etc
+5. 2 or jails with same ip, nested?
+6. smpd - send messages to check status switch etc
+7. each jail should have own zfs area
+
+-------------------------------------------------------------------
+
+# install scripts
+
+# create directorys
+
+# towns
+
+mkdir newport 
+mkdir brading 
+mkdir cowes 
+mkdir east-cowes
+mkdir ryde 
+mkdir sandown 
+mkdir shanklin 
+mkdir ventnor 
+mkdir yarmouth 
+
+# villages
+
+mkdir adgestone
+mkdir afton
+mkdir alverstone
+mkdir appley
+mkdir apse-heath
+mkdir arreton
+mkdir bembridge
+mkdir billingham
+mkdir binfield
+mkdir binstead
+mkdir blackgang
+mkdir blackwater
+mkdir bonchurch
+mkdir bouldnor
+mkdir bowcombe
+mkdir brighstone
+mkdir brook
+mkdir calbourne
+mkdir carisbrooke
+mkdir chale
+mkdir chale-green
+mkdir chillerton
+mkdir cranmore
+mkdir culver-down
+mkdir elmfield
+mkdir fishbourne
+mkdir freshwater
+mkdir gatcombe
+mkdir godshill
+mkdir great-thorness
+mkdir gunville
+mkdir gurnard
+mkdir hale-common
+mkdir hamstead
+mkdir havenstreet
+mkdir haylands
+mkdir horringford
+mkdir kingston
+mkdir lake
+mkdir luccombe
+mkdir marks-corner
+mkdir merstone
+mkdir mottistone
+mkdir nettlestone
+mkdir newbridge
+mkdir newchurch
+mkdir newtown
+mkdir ningwood
+mkdir ninham
+mkdir niton
+mkdir northwood
+mkdir norton-green
+mkdir oakfield
+mkdir porchfield
+mkdir puckaster
+mkdir puckpool
+mkdir quarr-hill
+mkdir queens-bower
+mkdir rew-street
+mkdir rookley-and-rookley-green
+mkdir rowridge
+mkdir seaview
+mkdir shalcombe
+mkdir shalfleet
+mkdir shide
+mkdir shorwell
+mkdir spring-vale
+mkdir st-helens
+mkdir st-lawrence
+mkdir swanmore
+mkdir thorley
+mkdir totland
+mkdir wellow
+mkdir whippingham
+mkdir whitely-bank
+mkdir whitwell
+mkdir winford
+mkdir wootton-and-wootton-bridge
+mkdir wroxall
+mkdir yaverland
+
+
+# install jail os
+
+# towns
+
+tar -xvf base.tar -C newport 
+tar -xvf base.tar -C brading 
+tar -xvf base.tar -C cowes 
+tar -xvf base.tar -C east-cowes
+tar -xvf base.tar -C ryde 
+tar -xvf base.tar -C sandown 
+tar -xvf base.tar -C shanklin 
+tar -xvf base.tar -C ventnor 
+tar -xvf base.tar -C yarmouth 
+
+# villages
+
+tar -xvf base.tar -C adgestone
+tar -xvf base.tar -C afton
+tar -xvf base.tar -C alverstone
+tar -xvf base.tar -C appley
+tar -xvf base.tar -C apse-heath
+tar -xvf base.tar -C arreton
+tar -xvf base.tar -C bembridge
+tar -xvf base.tar -C billingham
+tar -xvf base.tar -C binfield
+tar -xvf base.tar -C binstead
+tar -xvf base.tar -C blackgang
+tar -xvf base.tar -C blackwater
+tar -xvf base.tar -C bonchurch
+tar -xvf base.tar -C bouldnor
+tar -xvf base.tar -C bowcombe
+tar -xvf base.tar -C brighstone
+tar -xvf base.tar -C brook
+tar -xvf base.tar -C calbourne
+tar -xvf base.tar -C carisbrooke
+tar -xvf base.tar -C chale
+tar -xvf base.tar -C chale-green
+tar -xvf base.tar -C chillerton
+tar -xvf base.tar -C cranmore
+tar -xvf base.tar -C culver-down
+tar -xvf base.tar -C elmfield
+tar -xvf base.tar -C fishbourne
+tar -xvf base.tar -C freshwater
+tar -xvf base.tar -C gatcombe
+tar -xvf base.tar -C godshill
+tar -xvf base.tar -C great-thorness
+tar -xvf base.tar -C gunville
+tar -xvf base.tar -C gurnard
+tar -xvf base.tar -C hale-common
+tar -xvf base.tar -C hamstead
+tar -xvf base.tar -C havenstreet
+tar -xvf base.tar -C haylands
+tar -xvf base.tar -C horringford
+tar -xvf base.tar -C kingston
+tar -xvf base.tar -C lake
+tar -xvf base.tar -C luccombe
+tar -xvf base.tar -C marks-corner
+tar -xvf base.tar -C merstone
+tar -xvf base.tar -C mottistone
+tar -xvf base.tar -C nettlestone
+tar -xvf base.tar -C newbridge
+tar -xvf base.tar -C newchurch
+tar -xvf base.tar -C newtown
+tar -xvf base.tar -C ningwood
+tar -xvf base.tar -C ninham
+tar -xvf base.tar -C niton
+tar -xvf base.tar -C northwood
+tar -xvf base.tar -C norton-green
+tar -xvf base.tar -C oakfield
+tar -xvf base.tar -C porchfield
+tar -xvf base.tar -C puckaster
+tar -xvf base.tar -C puckpool
+tar -xvf base.tar -C quarr-hill
+tar -xvf base.tar -C queens-bower
+tar -xvf base.tar -C rew-street
+tar -xvf base.tar -C rookley-and-rookley-green
+tar -xvf base.tar -C rowridge
+tar -xvf base.tar -C seaview
+tar -xvf base.tar -C shalcombe
+tar -xvf base.tar -C shalfleet
+tar -xvf base.tar -C shide
+tar -xvf base.tar -C shorwell
+tar -xvf base.tar -C spring-vale
+tar -xvf base.tar -C st-helens
+tar -xvf base.tar -C st-lawrence
+tar -xvf base.tar -C swanmore
+tar -xvf base.tar -C thorley
+tar -xvf base.tar -C totland
+tar -xvf base.tar -C wellow
+tar -xvf base.tar -C whippingham
+tar -xvf base.tar -C whitely-bank
+tar -xvf base.tar -C whitwell
+tar -xvf base.tar -C winford
+tar -xvf base.tar -C wootton-and-wootton-bridge
+tar -xvf base.tar -C wroxall
+tar -xvf base.tar -C yaverland
+
+
+
+
+# change permisions (if needed)
+
+# towns
+
+chflags -R noschg newport 
+chflags -R noschg brading 
+chflags -R noschg cowes 
+chflags -R noschg east-cowes
+chflags -R noschg ryde 
+chflags -R noschg sandown 
+chflags -R noschg shanklin 
+chflags -R noschg ventnor 
+chflags -R noschg yarmouth 
+
+# villages
+
+chflags -R noschg adgestone
+chflags -R noschg afton
+chflags -R noschg alverstone
+chflags -R noschg appley
+chflags -R noschg apse-heath
+chflags -R noschg arreton
+chflags -R noschg bembridge
+chflags -R noschg billingham
+chflags -R noschg binfield
+chflags -R noschg binstead
+chflags -R noschg blackgang
+chflags -R noschg blackwater
+chflags -R noschg bonchurch
+chflags -R noschg bouldnor
+chflags -R noschg bowcombe
+chflags -R noschg brighstone
+chflags -R noschg brook
+chflags -R noschg calbourne
+chflags -R noschg carisbrooke
+chflags -R noschg chale
+chflags -R noschg chale-green
+chflags -R noschg chillerton
+chflags -R noschg cranmore
+chflags -R noschg culver-down
+chflags -R noschg elmfield
+chflags -R noschg fishbourne
+chflags -R noschg freshwater
+chflags -R noschg gatcombe
+chflags -R noschg godshill
+chflags -R noschg great-thorness
+chflags -R noschg gunville
+chflags -R noschg gurnard
+chflags -R noschg hale-common
+chflags -R noschg hamstead
+chflags -R noschg havenstreet
+chflags -R noschg haylands
+chflags -R noschg horringford
+chflags -R noschg kingston
+chflags -R noschg lake
+chflags -R noschg luccombe
+chflags -R noschg marks-corner
+chflags -R noschg merstone
+chflags -R noschg mottistone
+chflags -R noschg nettlestone
+chflags -R noschg newbridge
+chflags -R noschg newchurch
+chflags -R noschg newtown
+chflags -R noschg ningwood
+chflags -R noschg ninham
+chflags -R noschg niton
+chflags -R noschg northwood
+chflags -R noschg norton-green
+chflags -R noschg oakfield
+chflags -R noschg porchfield
+chflags -R noschg puckaster
+chflags -R noschg puckpool
+chflags -R noschg quarr-hill
+chflags -R noschg queens-bower
+chflags -R noschg rew-street
+chflags -R noschg rookley-and-rookley-green
+chflags -R noschg rowridge
+chflags -R noschg seaview
+chflags -R noschg shalcombe
+chflags -R noschg shalfleet
+chflags -R noschg shide
+chflags -R noschg shorwell
+chflags -R noschg spring-vale
+chflags -R noschg st-helens
+chflags -R noschg st-lawrence
+chflags -R noschg swanmore
+chflags -R noschg thorley
+chflags -R noschg totland
+chflags -R noschg wellow
+chflags -R noschg whippingham
+chflags -R noschg whitely-bank
+chflags -R noschg whitwell
+chflags -R noschg winford
+chflags -R noschg wootton-and-wootton-bridge
+chflags -R noschg wroxall
+chflags -R noschg yaverland
+
+
+# delete directorys
+
+# towns
+
+rm -rf newport 
+rm -rf brading 
+rm -rf cowes 
+rm -rf east-cowes
+rm -rf ryde 
+rm -rf sandown 
+rm -rf shanklin 
+rm -rf ventnor 
+rm -rf yarmouth 
+
+# villages
+
+rm -rf adgestone
+rm -rf afton
+rm -rf alverstone
+rm -rf appley
+rm -rf apse-heath
+rm -rf arreton
+rm -rf bembridge
+rm -rf billingham
+rm -rf binfield
+rm -rf binstead
+rm -rf blackgang
+rm -rf blackwater
+rm -rf bonchurch
+rm -rf bouldnor
+rm -rf bowcombe
+rm -rf brighstone
+rm -rf brook
+rm -rf calbourne
+rm -rf carisbrooke
+rm -rf chale
+rm -rf chale-green
+rm -rf chillerton
+rm -rf cranmore
+rm -rf culver-down
+rm -rf elmfield
+rm -rf fishbourne
+rm -rf freshwater
+rm -rf gatcombe
+rm -rf godshill
+rm -rf great-thorness
+rm -rf gunville
+rm -rf gurnard
+rm -rf hale-common
+rm -rf hamstead
+rm -rf havenstreet
+rm -rf haylands
+rm -rf horringford
+rm -rf kingston
+rm -rf lake
+rm -rf luccombe
+rm -rf marks-corner
+rm -rf merstone
+rm -rf mottistone
+rm -rf nettlestone
+rm -rf newbridge
+rm -rf newchurch
+rm -rf newtown
+rm -rf ningwood
+rm -rf ninham
+rm -rf niton
+rm -rf northwood
+rm -rf norton-green
+rm -rf oakfield
+rm -rf porchfield
+rm -rf puckaster
+rm -rf puckpool
+rm -rf quarr-hill
+rm -rf queens-bower
+rm -rf rew-street
+rm -rf rookley-and-rookley-green
+rm -rf rowridge
+rm -rf seaview
+rm -rf shalcombe
+rm -rf shalfleet
+rm -rf shide
+rm -rf shorwell
+rm -rf spring-vale
+rm -rf st-helens
+rm -rf st-lawrence
+rm -rf swanmore
+rm -rf thorley
+rm -rf totland
+rm -rf wellow
+rm -rf whippingham
+rm -rf whitely-bank
+rm -rf whitwell
+rm -rf winford
+rm -rf wootton-and-wootton-bridge
+rm -rf wroxall
+rm -rf yaverland
+
+-------------------------------------------------------------------
+
+# towns
+
+ newport 
+ brading 
+ cowes 
+ east-cowes
+ ryde 
+ sandown 
+ shanklin 
+ ventnor 
+ yarmouth 
+
+# villages
+
+ adgestone
+ afton
+ alverstone
+ appley
+ apse-heath
+ arreton
+ bembridge
+ billingham
+ binfield
+ binstead
+ blackgang
+ blackwater
+ bonchurch
+ bouldnor
+ bowcombe
+ brighstone
+ brook
+ calbourne
+ carisbrooke
+ chale
+ chale-green
+ chillerton
+ cranmore
+ culver-down
+ elmfield
+ fishbourne
+ freshwater
+ gatcombe
+ godshill
+ great-thorness
+ gunville
+ gurnard
+ hale-common
+ hamstead
+ havenstreet
+ haylands
+ horringford
+ kingston
+ lake
+ luccombe
+ marks-corner
+ merstone
+ mottistone
+ nettlestone
+ newbridge
+ newchurch
+ newtown
+ ningwood
+ ninham
+ niton
+ northwood
+ norton-green
+ oakfield
+ porchfield
+ puckaster
+ puckpool
+ quarr-hill
+ queens-bower
+ rew-street
+ rookley-and-rookley-green
+ rowridge
+ seaview
+ shalcombe
+ shalfleet
+ shide
+ shorwell
+ spring-vale
+ st-helens
+ st-lawrence
+ swanmore
+ thorley
+ totland
+ wellow
+ whippingham
+ whitely-bank
+ whitwell
+ winford
+ wootton-and-wootton-bridge
+ wroxall
+ yaverland
