@@ -15,7 +15,7 @@ update_motd="NO"
 
 hostname="devbox13"
 keymap="uk.kbd"
-ifconfig_em0="inet 192.168.1.10 netmask 255.255.255.0"
+ifconfig_vtnet0="inet 192.168.1.10 netmask 255.255.255.0"
 defaultrouter="192.168.1.254"
 sshd_enable="YES"
 # Set dumpdev to "AUTO" to enable crash dumps, "NO" to disable
@@ -45,6 +45,8 @@ ifconfig bridge create name vnetbridge mtu 9000 up
 
 # setup jails
 
+mkdir base
+
 bsdinstall jail base
 cd base
 tar -cvf ../base.tar *
@@ -73,7 +75,10 @@ rm -rf basebase
 5. 2 or jails with same ip, nested?
 6. smpd - send messages to check status switch etc
 7. each jail should have own zfs area
-8. use a script to create things
+8. use a script to create things!!!
+9. the jails are really exchanges, like bt, each provider
+   will have links (openreach) dial up?
+10. how can a bridge etc show data going through for a web page?
 
 ===================================================================
 
@@ -89,7 +94,7 @@ update_motd="NO"
 
 hostname="devbox13"
 keymap="uk.kbd"
-ifconfig_em0="inet 192.168.1.10 netmask 255.255.255.0"
+ifconfig_vtnet0="inet 192.168.1.10 netmask 255.255.255.0"
 defaultrouter="192.168.1.254"
 sshd_enable="YES"
 # Set dumpdev to "AUTO" to enable crash dumps, "NO" to disable
@@ -102,8 +107,8 @@ jail_parallel_start="YES"
 # add jails to start at boot
 jail_list=""
 
-ifconfig_bridge0="inet 10.0.0.1 netmask 0xffffff00 addm em1"
-ifconfig_em1="up"
+ifconfig_bridge0="inet 10.0.0.1 netmask 0xffffff00 addm vtnet1"
+ifconfig_vtnet1="up"
 
 # config network at runtime?
 
@@ -224,120 +229,129 @@ mkdir yaverland
 # towns
 
 tar -xvf base.tar -C newport 
-tar -xvf base.tar -C brading 
-tar -xvf base.tar -C cowes 
-tar -xvf base.tar -C east-cowes
-tar -xvf base.tar -C ryde 
-tar -xvf base.tar -C sandown 
-tar -xvf base.tar -C shanklin 
-tar -xvf base.tar -C ventnor 
-tar -xvf base.tar -C yarmouth 
+tar -xf base.tar -C brading 
+tar -xf base.tar -C cowes 
+tar -xf base.tar -C east-cowes
+tar -xf base.tar -C ryde 
+tar -xf base.tar -C sandown 
+tar -xf base.tar -C shanklin 
+tar -xf base.tar -C ventnor 
+tar -xf base.tar -C yarmouth 
 
 # villages
 
-tar -xvf base.tar -C adgestone
-tar -xvf base.tar -C afton
-tar -xvf base.tar -C alverstone
-tar -xvf base.tar -C appley
-tar -xvf base.tar -C apse-heath
-tar -xvf base.tar -C arreton
-tar -xvf base.tar -C bembridge
-tar -xvf base.tar -C billingham
-tar -xvf base.tar -C binfield
-tar -xvf base.tar -C binstead
-tar -xvf base.tar -C blackgang
-tar -xvf base.tar -C blackwater
-tar -xvf base.tar -C bonchurch
-tar -xvf base.tar -C bouldnor
-tar -xvf base.tar -C bowcombe
-tar -xvf base.tar -C brighstone
-tar -xvf base.tar -C brook
-tar -xvf base.tar -C calbourne
-tar -xvf base.tar -C carisbrooke
-tar -xvf base.tar -C chale
-tar -xvf base.tar -C chale-green
-tar -xvf base.tar -C chillerton
-tar -xvf base.tar -C cranmore
-tar -xvf base.tar -C culver-down
-tar -xvf base.tar -C elmfield
-tar -xvf base.tar -C fishbourne
-tar -xvf base.tar -C freshwater
-tar -xvf base.tar -C gatcombe
-tar -xvf base.tar -C godshill
-tar -xvf base.tar -C great-thorness
-tar -xvf base.tar -C gunville
-tar -xvf base.tar -C gurnard
-tar -xvf base.tar -C hale-common
-tar -xvf base.tar -C hamstead
-tar -xvf base.tar -C havenstreet
-tar -xvf base.tar -C haylands
-tar -xvf base.tar -C horringford
-tar -xvf base.tar -C kingston
-tar -xvf base.tar -C lake
-tar -xvf base.tar -C luccombe
-tar -xvf base.tar -C marks-corner
-tar -xvf base.tar -C merstone
-tar -xvf base.tar -C mottistone
-tar -xvf base.tar -C nettlestone
-tar -xvf base.tar -C newbridge
-tar -xvf base.tar -C newchurch
-tar -xvf base.tar -C newtown
-tar -xvf base.tar -C ningwood
-tar -xvf base.tar -C ninham
-tar -xvf base.tar -C niton
-tar -xvf base.tar -C northwood
-tar -xvf base.tar -C norton-green
-tar -xvf base.tar -C oakfield
-tar -xvf base.tar -C porchfield
-tar -xvf base.tar -C puckaster
-tar -xvf base.tar -C puckpool
-tar -xvf base.tar -C quarr-hill
-tar -xvf base.tar -C queens-bower
-tar -xvf base.tar -C rew-street
-tar -xvf base.tar -C rookley-and-rookley-green
-tar -xvf base.tar -C rowridge
-tar -xvf base.tar -C seaview
-tar -xvf base.tar -C shalcombe
-tar -xvf base.tar -C shalfleet
-tar -xvf base.tar -C shide
-tar -xvf base.tar -C shorwell
-tar -xvf base.tar -C spring-vale
-tar -xvf base.tar -C st-helens
-tar -xvf base.tar -C st-lawrence
-tar -xvf base.tar -C swanmore
-tar -xvf base.tar -C thorley
-tar -xvf base.tar -C totland
-tar -xvf base.tar -C wellow
-tar -xvf base.tar -C whippingham
-tar -xvf base.tar -C whitely-bank
-tar -xvf base.tar -C whitwell
-tar -xvf base.tar -C winford
-tar -xvf base.tar -C wootton-and-wootton-bridge
-tar -xvf base.tar -C wroxall
-tar -xvf base.tar -C yaverland
+tar -xf base.tar -C adgestone
+tar -xf base.tar -C afton
+tar -xf base.tar -C alverstone
+tar -xf base.tar -C appley
+tar -xf base.tar -C apse-heath
+tar -xf base.tar -C arreton
+tar -xf base.tar -C bembridge
+tar -xf base.tar -C billingham
+tar -xf base.tar -C binfield
+tar -xf base.tar -C binstead
+tar -xf base.tar -C blackgang
+tar -xf base.tar -C blackwater
+tar -xf base.tar -C bonchurch
+tar -xf base.tar -C bouldnor
+tar -xf base.tar -C bowcombe
+tar -xf base.tar -C brighstone
+tar -xf base.tar -C brook
+tar -xf base.tar -C calbourne
+tar -xf base.tar -C carisbrooke
+tar -xf base.tar -C chale
+tar -xf base.tar -C chale-green
+tar -xf base.tar -C chillerton
+tar -xf base.tar -C cranmore
+tar -xf base.tar -C culver-down
+tar -xf base.tar -C elmfield
+tar -xf base.tar -C fishbourne
+tar -xf base.tar -C freshwater
+tar -xf base.tar -C gatcombe
+tar -xf base.tar -C godshill
+tar -xf base.tar -C great-thorness
+tar -xf base.tar -C gunville
+tar -xf base.tar -C gurnard
+tar -xf base.tar -C hale-common
+tar -xf base.tar -C hamstead
+tar -xf base.tar -C havenstreet
+tar -xf base.tar -C haylands
+tar -xf base.tar -C horringford
+tar -xf base.tar -C kingston
+tar -xf base.tar -C lake
+tar -xf base.tar -C luccombe
+tar -xf base.tar -C marks-corner
+tar -xf base.tar -C merstone
+tar -xf base.tar -C mottistone
+tar -xf base.tar -C nettlestone
+tar -xf base.tar -C newbridge
+tar -xf base.tar -C newchurch
+tar -xf base.tar -C newtown
+tar -xf base.tar -C ningwood
+tar -xf base.tar -C ninham
+tar -xf base.tar -C niton
+tar -xf base.tar -C northwood
+tar -xf base.tar -C norton-green
+tar -xf base.tar -C oakfield
+tar -xf base.tar -C porchfield
+tar -xf base.tar -C puckaster
+tar -xf base.tar -C puckpool
+tar -xf base.tar -C quarr-hill
+tar -xf base.tar -C queens-bower
+tar -xf base.tar -C rew-street
+tar -xf base.tar -C rookley-and-rookley-green
+tar -xf base.tar -C rowridge
+tar -xf base.tar -C seaview
+tar -xf base.tar -C shalcombe
+tar -xf base.tar -C shalfleet
+tar -xf base.tar -C shide
+tar -xf base.tar -C shorwell
+tar -xf base.tar -C spring-vale
+tar -xf base.tar -C st-helens
+tar -xf base.tar -C st-lawrence
+tar -xf base.tar -C swanmore
+tar -xf base.tar -C thorley
+tar -xf base.tar -C totland
+tar -xf base.tar -C wellow
+tar -xf base.tar -C whippingham
+tar -xf base.tar -C whitely-bank
+tar -xf base.tar -C whitwell
+tar -xf base.tar -C winford
+tar -xf base.tar -C wootton-and-wootton-bridge
+tar -xf base.tar -C wroxall
+tar -xf base.tar -C yaverland
 
 # start a jail etc
 
 ifconfig bridge0 create up
-ifconfig bridge0 inet 10.0.0.1 netmask 0xffffff00
-ifconfig bridge0 addm em1
-ifconfig em1 up
+# ifconfig bridge0 inet 10.0.0.1 netmask 0xffffff00
+# needd default route
+dhclient bridge0
+ifconfig bridge0 addm em0
+ifconfig em0 up
 
-ifconfig epair create 
+# config epair and start jail, name is optional
+
+ifconfig epair create name newport
 ifconfig bridge0 addm epair0a 
 	
 jail -c name=newport host.hostname=newport persist \
       vnet vnet.interface=epair0b \
       path=/usr/jails/newport devfs_ruleset=110 \
-      mount.devfs=true
+      mount.devfs=true 
 
 
 
+
+
+
+
+# stop jail
+
+jail -R newport
 
 # shows all epairs
 ifconfig -g epair 
-
-
 
 # change permisions (if needed)
 
