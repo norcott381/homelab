@@ -1,0 +1,240 @@
+# add rules 110 for bpf
+
+vi /etc/devfs.rules
+
+[jail_devfs=110]
+add include $devfsrules_hide_all
+add include $devfsrules_unhide_basic
+add include $devfsrules_unhide_login
+#add path fuse unhide
+#add path zfs unhide
+add path 'bpf*' unhide
+
+vi /etc/rc.conf
+
+jail_enable="YES"
+jail_parallel_start="YES"
+jail_list=""
+
+
+
+----------------------------------------------------------
+
+# create jails
+
+mkdir /jails
+cd /jails
+
+mkdir base
+
+bsdinstall jail base
+cd base
+tar -cvf ../base.tar *
+
+# towns
+
+mkdir newport 
+mkdir brading 
+mkdir cowes 
+mkdir east-cowes
+mkdir ryde 
+mkdir sandown 
+mkdir shanklin 
+mkdir ventnor 
+mkdir yarmouth 
+
+# villages
+
+mkdir adgestone
+mkdir afton
+mkdir alverstone
+mkdir appley
+mkdir apse-heath
+mkdir arreton
+mkdir bembridge
+mkdir billingham
+mkdir binfield
+mkdir binstead
+mkdir blackgang
+mkdir blackwater
+mkdir bonchurch
+mkdir bouldnor
+mkdir bowcombe
+mkdir brighstone
+mkdir brook
+mkdir calbourne
+mkdir carisbrooke
+mkdir chale
+mkdir chale-green
+mkdir chillerton
+mkdir cranmore
+mkdir culver-down
+mkdir elmfield
+mkdir fishbourne
+mkdir freshwater
+mkdir gatcombe
+mkdir godshill
+mkdir great-thorness
+mkdir gunville
+mkdir gurnard
+mkdir hale-common
+mkdir hamstead
+mkdir havenstreet
+mkdir haylands
+mkdir horringford
+mkdir kingston
+mkdir lake
+mkdir luccombe
+mkdir marks-corner
+mkdir merstone
+mkdir mottistone
+mkdir nettlestone
+mkdir newbridge
+mkdir newchurch
+mkdir newtown
+mkdir ningwood
+mkdir ninham
+mkdir niton
+mkdir northwood
+mkdir norton-green
+mkdir oakfield
+mkdir porchfield
+mkdir puckaster
+mkdir puckpool
+mkdir quarr-hill
+mkdir queens-bower
+mkdir rew-street
+mkdir rookley-and-rookley-green
+mkdir rowridge
+mkdir seaview
+mkdir shalcombe
+mkdir shalfleet
+mkdir shide
+mkdir shorwell
+mkdir spring-vale
+mkdir st-helens
+mkdir st-lawrence
+mkdir swanmore
+mkdir thorley
+mkdir totland
+mkdir wellow
+mkdir whippingham
+mkdir whitely-bank
+mkdir whitwell
+mkdir winford
+mkdir wootton-and-wootton-bridge
+mkdir wroxall
+mkdir yaverland
+
+# populate
+# towns
+
+tar -xvf base.tar -C newport 
+tar -xf base.tar -C brading 
+tar -xf base.tar -C cowes 
+tar -xf base.tar -C east-cowes
+tar -xf base.tar -C ryde 
+tar -xf base.tar -C sandown 
+tar -xf base.tar -C shanklin 
+tar -xf base.tar -C ventnor 
+tar -xf base.tar -C yarmouth 
+
+# villages
+
+tar -xf base.tar -C adgestone
+tar -xf base.tar -C afton
+tar -xf base.tar -C alverstone
+tar -xf base.tar -C appley
+tar -xf base.tar -C apse-heath
+tar -xf base.tar -C arreton
+tar -xf base.tar -C bembridge
+tar -xf base.tar -C billingham
+tar -xf base.tar -C binfield
+tar -xf base.tar -C binstead
+tar -xf base.tar -C blackgang
+tar -xf base.tar -C blackwater
+tar -xf base.tar -C bonchurch
+tar -xf base.tar -C bouldnor
+tar -xf base.tar -C bowcombe
+tar -xf base.tar -C brighstone
+tar -xf base.tar -C brook
+tar -xf base.tar -C calbourne
+tar -xf base.tar -C carisbrooke
+tar -xf base.tar -C chale
+tar -xf base.tar -C chale-green
+tar -xf base.tar -C chillerton
+tar -xf base.tar -C cranmore
+tar -xf base.tar -C culver-down
+tar -xf base.tar -C elmfield
+tar -xf base.tar -C fishbourne
+tar -xf base.tar -C freshwater
+tar -xf base.tar -C gatcombe
+tar -xf base.tar -C godshill
+tar -xf base.tar -C great-thorness
+tar -xf base.tar -C gunville
+tar -xf base.tar -C gurnard
+tar -xf base.tar -C hale-common
+tar -xf base.tar -C hamstead
+tar -xf base.tar -C havenstreet
+tar -xf base.tar -C haylands
+tar -xf base.tar -C horringford
+tar -xf base.tar -C kingston
+tar -xf base.tar -C lake
+tar -xf base.tar -C luccombe
+tar -xf base.tar -C marks-corner
+tar -xf base.tar -C merstone
+tar -xf base.tar -C mottistone
+tar -xf base.tar -C nettlestone
+tar -xf base.tar -C newbridge
+tar -xf base.tar -C newchurch
+tar -xf base.tar -C newtown
+tar -xf base.tar -C ningwood
+tar -xf base.tar -C ninham
+tar -xf base.tar -C niton
+tar -xf base.tar -C northwood
+tar -xf base.tar -C norton-green
+tar -xf base.tar -C oakfield
+tar -xf base.tar -C porchfield
+tar -xf base.tar -C puckaster
+tar -xf base.tar -C puckpool
+tar -xf base.tar -C quarr-hill
+tar -xf base.tar -C queens-bower
+tar -xf base.tar -C rew-street
+tar -xf base.tar -C rookley-and-rookley-green
+tar -xf base.tar -C rowridge
+tar -xf base.tar -C seaview
+tar -xf base.tar -C shalcombe
+tar -xf base.tar -C shalfleet
+tar -xf base.tar -C shide
+tar -xf base.tar -C shorwell
+tar -xf base.tar -C spring-vale
+tar -xf base.tar -C st-helens
+tar -xf base.tar -C st-lawrence
+tar -xf base.tar -C swanmore
+tar -xf base.tar -C thorley
+tar -xf base.tar -C totland
+tar -xf base.tar -C wellow
+tar -xf base.tar -C whippingham
+tar -xf base.tar -C whitely-bank
+tar -xf base.tar -C whitwell
+tar -xf base.tar -C winford
+tar -xf base.tar -C wootton-and-wootton-bridge
+tar -xf base.tar -C wroxall
+tar -xf base.tar -C yaverland
+
+
+ifconfig bridge0 create up
+ifconfig bridge0 addm vtnet0
+dhclient bridge0
+
+ifconfig epair create 
+
+ifconfig bridge0 addm epair0a 
+
+jail -c name=newport host.hostname=newport persist \
+      vnet vnet.interface=epair0b \
+      path=/jails/newport devfs_ruleset=110 \
+      mount.devfs=true 
+
+
+## put in a config file the can use service command

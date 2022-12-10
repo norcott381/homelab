@@ -22,10 +22,9 @@ sshd_enable="YES"
 dumpdev="NO"
 zfs_enable="YES"
 
+
 jail_enable="YES"
 jail_parallel_start="YES"
-
-# add jails to start at boot
 jail_list=""
 
 
