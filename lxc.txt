@@ -1,14 +1,5 @@
 lxd init
 
-lxc launch images:debian/11 test
-
-
-
-lxc remote add --protocol simplestreams ubuntu-minimal https://cloud-images.ubuntu.com/minimal/releases/
-
-lxc launch ubuntu-minimal:jammy v42
-
-
 
 lxc launch images:debian/11 newport 
 lxc launch images:debian/11 brading 

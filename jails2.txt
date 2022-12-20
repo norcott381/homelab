@@ -18,12 +18,13 @@ jail_list=""
 
 
 
+
 ----------------------------------------------------------
 
 # create jails
 
-mkdir /jails
-cd /jails
+mkdir jails
+cd jails
 
 mkdir base
 
@@ -222,9 +223,105 @@ tar -xf base.tar -C wootton-and-wootton-bridge
 tar -xf base.tar -C wroxall
 tar -xf base.tar -C yaverland
 
+# towns # how to monitor traffic through a bridge?
+
+ifconfig bridge create name newport.ex0 up
+ifconfig bridge create name brading.ex0  
+ifconfig bridge create name   cowes.ex0 
+ifconfig bridge create name east-co.ex0
+ifconfig bridge create name    ryde.ex0
+ifconfig bridge create name sandown.ex0
+ifconfig bridge create name shankli.ex0 
+ifconfig bridge create name ventnor.ex0 
+ifconfig bridge create name yarmout.ex0 
+
+# villages
+
+ifconfig bridge create name adgesto.ex0
+ifconfig bridge create name   afton.ex0
+ifconfig bridge create name alverst.ex0  
+ifconfig bridge create name  appley.ex0 
+ifconfig bridge create name    apse.ex0 
+ifconfig bridge create name arreton.ex0 
+ifconfig bridge create name bembrid.ex0 
+ifconfig bridge create name billing.ex0  
+ifconfig bridge create name binfiel.ex0  
+ifconfig bridge create name binstea.ex0
+ifconfig bridge create name blackga.ex0 
+ifconfig bridge create name blackwa.ex0
+ifconfig bridge create name bonchur.ex0  
+ifconfig bridge create name bouldno.ex0  
+ifconfig bridge create name bowcomb.ex0  
+ifconfig bridge create name brighst.ex0  
+ifconfig bridge create name   brook.ex0  
+ifconfig bridge create name albourn.ex0 
+ifconfig bridge create name carisbr.ex0 
+ifconfig bridge create name   chale.ex0 
+ifconfig bridge create name  chaleg.ex0  
+ifconfig bridge create name chiller.ex0  
+ifconfig bridge create name cranmor.ex0 
+ifconfig bridge create name  culver.ex0 
+ifconfig bridge create name elmfiel.ex0 
+ifconfig bridge create name fishbou.ex0
+ifconfig bridge create name freshwa.ex0
+ifconfig bridge create name gatcomb.ex0 
+ifconfig bridge create name godshil.ex0 
+ifconfig bridge create name   great.ex0 
+ifconfig bridge create name gunvill.ex0 
+ifconfig bridge create name gurnard.ex0 
+ifconfig bridge create name    hale.ex0 
+ifconfig bridge create name hamstea.ex0 
+ifconfig bridge create name havenst.ex0 
+ifconfig bridge create name hayland.ex0 
+ifconfig bridge create name horring.ex0
+ifconfig bridge create name kingsto.ex0  
+ifconfig bridge create name    lake.ex0 
+ifconfig bridge create name luccomb.ex0 
+ifconfig bridge create name   marks.ex0  
+ifconfig bridge create name merston.ex0
+ifconfig bridge create name mottist.ex0  
+ifconfig bridge create name nettles.ex0
+ifconfig bridge create name newbrid.ex0
+ifconfig bridge create name newchur.ex0 
+ifconfig bridge create name newtown.ex0 
+ifconfig bridge create name ningwoo.ex0 
+ifconfig bridge create name  ninham.ex0  
+ifconfig bridge create name   niton.ex0
+ifconfig bridge create name northwo.ex0
+ifconfig bridge create name  norton.ex0 
+ifconfig bridge create name oakfiel.ex0  
+ifconfig bridge create name porchfi.ex0
+ifconfig bridge create name puckast.ex0 
+ifconfig bridge create name puckpoo.ex0 
+ifconfig bridge create name   quarr.ex0 
+ifconfig bridge create name  queens.ex0 
+ifconfig bridge create name     rew.ex0  
+ifconfig bridge create name rookley.ex0  
+ifconfig bridge create name rowridg.ex0  
+ifconfig bridge create name seaview.ex0 
+ifconfig bridge create name shalcom.ex0
+ifconfig bridge create name shalfle.ex0  
+ifconfig bridge create name   shide.ex0 
+ifconfig bridge create name shorwel.ex0  
+ifconfig bridge create name  spring.ex0   
+ifconfig bridge create name st-hele.ex0
+ifconfig bridge create name st-lawr.ex0 
+ifconfig bridge create name swanmor.ex0  
+ifconfig bridge create name thorley.ex0 
+ifconfig bridge create name totland.ex0
+ifconfig bridge create name  wellow.ex0  
+ifconfig bridge create name whippin.ex0  
+ifconfig bridge create name whitely.ex0
+ifconfig bridge create name whitwel.ex0  
+ifconfig bridge create name winford.ex0
+ifconfig bridge create name wootton.ex0  
+ifconfig bridge create name wroxall.ex0
+ifconfig bridge create name yaverla.ex0
+
+
 
 ifconfig bridge0 create up
-ifconfig bridge0 addm vtnet0
+ifconfig bridge0 addm em0
 dhclient bridge0
 
 ifconfig epair create 
