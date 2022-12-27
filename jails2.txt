@@ -17,7 +17,7 @@ jail_parallel_start="YES"
 jail_list=""
 
 
-
+### aim - set up basic network and jails then expand upon it with diffrent configurations
 
 ----------------------------------------------------------
 
@@ -32,9 +32,11 @@ bsdinstall jail base
 cd base
 tar -cvf ../base.tar *
 
-# towns
+# create directorys
 
-mkdir newport 
+# really user routers
+
+mkdir newport.ur0
 mkdir brading 
 mkdir cowes 
 mkdir east-cowes
@@ -127,10 +129,13 @@ mkdir wootton-and-wootton-bridge
 mkdir wroxall
 mkdir yaverland
 
+
+
+
 # populate
 # towns
 
-tar -xvf base.tar -C newport 
+tar -xvf base.tar -C newport.ur0 
 tar -xf base.tar -C brading 
 tar -xf base.tar -C cowes 
 tar -xf base.tar -C east-cowes
@@ -223,9 +228,9 @@ tar -xf base.tar -C wootton-and-wootton-bridge
 tar -xf base.tar -C wroxall
 tar -xf base.tar -C yaverland
 
-# towns # how to monitor traffic through a bridge?
+# towns - how to monitor traffic through a bridge?
 
-ifconfig bridge create name newport.ex0 up
+ifconfig bridge create name newport.ex0 
 ifconfig bridge create name brading.ex0  
 ifconfig bridge create name   cowes.ex0 
 ifconfig bridge create name east-co.ex0
@@ -316,7 +321,8 @@ ifconfig bridge create name whitwel.ex0
 ifconfig bridge create name winford.ex0
 ifconfig bridge create name wootton.ex0  
 ifconfig bridge create name wroxall.ex0
-ifconfig bridge create name yaverla.ex0
+ifconfig bridge create name yaverla.ex0  
+
 
 
 
