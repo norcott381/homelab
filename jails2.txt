@@ -37,196 +37,726 @@ tar -cvf ../base.tar *
 # really user routers
 
 mkdir newport.ur0
-mkdir brading 
-mkdir cowes 
-mkdir east-cowes
-mkdir ryde 
-mkdir sandown 
-mkdir shanklin 
-mkdir ventnor 
-mkdir yarmouth 
+mkdir newport.ur1
+mkdir newport.ur2
+
+mkdir brading.ur0 
+mkdir brading.ur1 
+mkdir brading.ur2 
+
+mkdir cowes.ur0 
+mkdir cowes.ur1
+mkdir cowes.ur2
+
+mkdir east-cowes.ur0
+mkdir east-cowes.ur1
+mkdir east-cowes.ur2
+
+mkdir ryde.ur0 
+mkdir ryde.ur1
+mkdir ryde.ur2
+
+mkdir sandown.ur0
+mkdir sandown.ur1
+mkdir sandown.ur2
+
+mkdir shanklin.ur0 
+mkdir shanklin.ur1
+mkdir shanklin.ur2
+
+mkdir ventnor.ur0 
+mkdir ventnor.ur1
+mkdir ventnor.ur2 
+
+mkdir yarmouth.ur0 
+mkdir yarmouth.ur1 
+mkdir yarmouth.ur2 
 
 # villages
 
-mkdir adgestone
-mkdir afton
-mkdir alverstone
-mkdir appley
-mkdir apse-heath
-mkdir arreton
-mkdir bembridge
-mkdir billingham
-mkdir binfield
-mkdir binstead
-mkdir blackgang
-mkdir blackwater
-mkdir bonchurch
-mkdir bouldnor
-mkdir bowcombe
-mkdir brighstone
-mkdir brook
-mkdir calbourne
-mkdir carisbrooke
-mkdir chale
-mkdir chale-green
-mkdir chillerton
-mkdir cranmore
-mkdir culver-down
-mkdir elmfield
-mkdir fishbourne
-mkdir freshwater
-mkdir gatcombe
-mkdir godshill
-mkdir great-thorness
-mkdir gunville
-mkdir gurnard
-mkdir hale-common
-mkdir hamstead
-mkdir havenstreet
-mkdir haylands
-mkdir horringford
-mkdir kingston
-mkdir lake
-mkdir luccombe
-mkdir marks-corner
-mkdir merstone
-mkdir mottistone
-mkdir nettlestone
-mkdir newbridge
-mkdir newchurch
-mkdir newtown
-mkdir ningwood
-mkdir ninham
-mkdir niton
-mkdir northwood
-mkdir norton-green
-mkdir oakfield
-mkdir porchfield
-mkdir puckaster
-mkdir puckpool
-mkdir quarr-hill
-mkdir queens-bower
-mkdir rew-street
-mkdir rookley-and-rookley-green
-mkdir rowridge
-mkdir seaview
-mkdir shalcombe
-mkdir shalfleet
-mkdir shide
-mkdir shorwell
-mkdir spring-vale
-mkdir st-helens
-mkdir st-lawrence
-mkdir swanmore
-mkdir thorley
-mkdir totland
-mkdir wellow
-mkdir whippingham
-mkdir whitely-bank
-mkdir whitwell
-mkdir winford
-mkdir wootton-and-wootton-bridge
-mkdir wroxall
-mkdir yaverland
+mkdir adgestone.ur0
+mkdir adgestone.ur1
+mkdir adgestone.ur2
 
+mkdir afton.ur0
+mkdir afton.ur1
+mkdir afton.ur2
 
+mkdir alverstone.ur0
+mkdir alverstone.ur1
+mkdir alverstone.ur2
+
+mkdir appley.ur0
+mkdir appley.ur1
+mkdir appley.ur2
+
+mkdir apse-heath.ur0
+mkdir apse-heath.ur1
+mkdir apse-heath.ur2
+
+mkdir arreton.ur0
+mkdir arreton.ur1
+mkdir arreton.ur2
+
+mkdir bembridge.ur0
+mkdir bembridge.ur1
+mkdir bembridge.ur2
+
+mkdir billingham.ur0
+mkdir billingham.ur1
+mkdir billingham.ur2
+
+mkdir binfield.ur0
+mkdir binfield.ur1
+mkdir binfield.ur2
+
+mkdir binstead.ur0
+mkdir binstead.ur1
+mkdir binstead.ur2
+
+mkdir blackgang.ur0
+mkdir blackgang.ur1
+mkdir blackgang.ur2
+
+mkdir blackwater.ur0
+mkdir blackwater.ur1
+mkdir blackwater.ur2
+
+mkdir bonchurch.ur0
+mkdir bonchurch.ur1
+mkdir bonchurch.ur2
+
+mkdir bouldnor.ur0
+mkdir bouldnor.ur1
+mkdir bouldnor.ur2
+
+mkdir bowcombe.ur0
+mkdir bowcombe.ur1
+mkdir bowcombe.ur2
+
+mkdir brighstone.ur0
+mkdir brighstone.ur1
+mkdir brighstone.ur2
+
+mkdir brook.ur0
+mkdir brook.ur1
+mkdir brook.ur2
+
+mkdir calbourne.ur0
+mkdir calbourne.ur1
+mkdir calbourne.ur2
+
+mkdir carisbrooke.ur0
+mkdir carisbrooke.ur1
+mkdir carisbrooke.ur2
+
+mkdir chale.ur0
+mkdir chale.ur1
+mkdir chale.ur2
+
+mkdir chale-green.ur0
+mkdir chale-green.ur1
+mkdir chale-green.ur2
+
+mkdir chillerton.ur0
+mkdir chillerton.ur1
+mkdir chillerton.ur2
+
+mkdir cranmore.ur0
+mkdir cranmore.ur1
+mkdir cranmore.ur2
+
+mkdir culver-down.ur0
+mkdir culver-down.ur1
+mkdir culver-down.ur2
+
+mkdir elmfield.ur0
+mkdir elmfield.ur1
+mkdir elmfield.ur2
+
+mkdir fishbourne.ur0
+mkdir fishbourne.ur1
+mkdir fishbourne.ur2
+
+mkdir freshwater.ur0
+mkdir freshwater.ur1
+mkdir freshwater.ur2
+
+mkdir gatcombe.ur0
+mkdir gatcombe.ur1
+mkdir gatcombe.ur2
+
+mkdir godshill.ur0
+mkdir godshill.ur1
+mkdir godshill.ur2
+
+mkdir great-thorness.ur0
+mkdir great-thorness.ur1
+mkdir great-thorness.ur2
+
+mkdir gunville.ur0
+mkdir gunville.ur1
+mkdir gunville.ur2
+
+mkdir gurnard.ur0
+mkdir gurnard.ur1
+mkdir gurnard.ur2
+
+mkdir hale-common.ur0
+mkdir hale-common.ur1
+mkdir hale-common.ur2
+
+mkdir hamstead.ur0
+mkdir hamstead.ur1
+mkdir hamstead.ur2
+
+mkdir havenstreet.ur0
+mkdir havenstreet.ur1
+mkdir havenstreet.ur2
+
+mkdir haylands.ur0
+mkdir haylands.ur1
+mkdir haylands.ur2
+
+mkdir horringford.ur0
+mkdir horringford.ur1
+mkdir horringford.ur2
+
+mkdir kingston.ur0
+mkdir kingston.ur1
+mkdir kingston.ur2
+
+mkdir lake.ur0
+mkdir lake.ur1
+mkdir lake.ur2
+
+mkdir luccombe.ur0
+mkdir luccombe.ur1
+mkdir luccombe.ur2
+
+mkdir marks-corner.ur0
+mkdir marks-corner.ur1
+mkdir marks-corner.ur2
+
+mkdir merstone.ur0
+mkdir merstone.ur1
+mkdir merstone.ur2
+
+mkdir mottistone.ur0
+mkdir mottistone.ur1
+mkdir mottistone.ur2
+
+mkdir nettlestone.ur0
+mkdir nettlestone.ur1
+mkdir nettlestone.ur2
+
+mkdir newbridge.ur0
+mkdir newbridge.ur1
+mkdir newbridge.ur2
+
+mkdir newchurch.ur0
+mkdir newchurch.ur1
+mkdir newchurch.ur2
+
+mkdir newtown.ur0
+mkdir newtown.ur1
+mkdir newtown.ur2
+
+mkdir ningwood.ur0
+mkdir ningwood.ur1
+mkdir ningwood.ur2
+
+mkdir ninham.ur0
+mkdir ninham.ur1
+mkdir ninham.ur2
+
+mkdir niton.ur0
+mkdir niton.ur1
+mkdir niton.ur2
+
+mkdir northwood.ur0
+mkdir northwood.ur1
+mkdir northwood.ur2
+
+mkdir norton-green.ur0
+mkdir norton-green.ur1
+mkdir norton-green.ur2
+
+mkdir oakfield.ur0
+mkdir oakfield.ur1
+mkdir oakfield.ur2
+
+mkdir porchfield.ur0
+mkdir porchfield.ur1
+mkdir porchfield.ur2
+
+mkdir puckaster.ur0
+mkdir puckaster.ur1
+mkdir puckaster.ur2
+
+mkdir puckpool.ur0
+mkdir puckpool.ur1
+mkdir puckpool.ur2
+
+mkdir quarr-hill.ur0
+mkdir quarr-hill.ur1
+mkdir quarr-hill.ur2
+
+mkdir queens-bower.ur0
+mkdir queens-bower.ur1
+mkdir queens-bower.ur2
+
+mkdir rew-street.ur0
+mkdir rew-street.ur1
+mkdir rew-street.ur2
+
+mkdir rookley-and-rookley-green.ur0
+mkdir rookley-and-rookley-green.ur1
+mkdir rookley-and-rookley-green.ur2
+
+mkdir rowridge.ur0
+mkdir rowridge.ur1
+mkdir rowridge.ur2
+
+mkdir seaview.ur0
+mkdir seaview.ur1
+mkdir seaview.ur2
+
+mkdir shalcombe.ur0
+mkdir shalcombe.ur1
+mkdir shalcombe.ur2
+
+mkdir shalfleet.ur0
+mkdir shalfleet.ur1
+mkdir shalfleet.ur2
+
+mkdir shide.ur0
+mkdir shide.ur1
+mkdir shide.ur2
+
+mkdir shorwell.ur0
+mkdir shorwell.ur1
+mkdir shorwell.ur2
+
+mkdir spring-vale.ur0
+mkdir spring-vale.ur1
+mkdir spring-vale.ur2
+
+mkdir st-helens.ur0
+mkdir st-helens.ur1
+mkdir st-helens.ur2
+
+mkdir st-lawrence.ur0
+mkdir st-lawrence.ur1
+mkdir st-lawrence.ur2
+
+mkdir swanmore.ur0
+mkdir swanmore.ur1
+mkdir swanmore.ur2
+
+mkdir thorley.ur0
+mkdir thorley.ur1
+mkdir thorley.ur2
+
+mkdir totland.ur0
+mkdir totland.ur1
+mkdir totland.ur2
+
+mkdir wellow.ur0
+mkdir wellow.ur1
+mkdir wellow.ur2
+
+mkdir whippingham.ur0
+mkdir whippingham.ur1
+mkdir whippingham.ur2
+
+mkdir whitely-bank.ur0
+mkdir whitely-bank.ur1
+mkdir whitely-bank.ur2
+
+mkdir whitwell.ur0
+mkdir whitwell.ur1
+mkdir whitwell.ur2
+
+mkdir winford.ur0
+mkdir winford.ur1
+mkdir winford.ur2
+
+mkdir wootton-and-wootton-bridge.ur0
+mkdir wootton-and-wootton-bridge.ur1
+mkdir wootton-and-wootton-bridge.ur2
+
+mkdir wroxall.ur0
+mkdir wroxall.ur1
+mkdir wroxall.ur2
+
+mkdir yaverland.ur0
+mkdir yaverland.ur1
+mkdir yaverland.ur2
 
 
 # populate
 # towns
 
 tar -xvf base.tar -C newport.ur0 
-tar -xf base.tar -C brading 
-tar -xf base.tar -C cowes 
-tar -xf base.tar -C east-cowes
-tar -xf base.tar -C ryde 
-tar -xf base.tar -C sandown 
-tar -xf base.tar -C shanklin 
-tar -xf base.tar -C ventnor 
-tar -xf base.tar -C yarmouth 
+tar -xf base.tar -C newport.ur1
+tar -xf base.tar -C newport.ur2 
+
+tar -xf base.tar -C brading.ur0
+tar -xf base.tar -C brading.ur1
+tar -xf base.tar -C brading.ur2
+
+tar -xf base.tar -C cowes.ur0 
+tar -xf base.tar -C cowes.ur1 
+tar -xf base.tar -C cowes.ur2 
+
+tar -xf base.tar -C east-cowes.ur0
+tar -xf base.tar -C east-cowes.ur1
+tar -xf base.tar -C east-cowes.ur2
+
+tar -xf base.tar -C ryde.ur0
+tar -xf base.tar -C ryde.ur1
+tar -xf base.tar -C ryde.ur2
+
+tar -xf base.tar -C sandown.ur0 
+tar -xf base.tar -C sandown.ur1 
+tar -xf base.tar -C sandown.ur2 
+
+tar -xf base.tar -C shanklin.ur0
+tar -xf base.tar -C shanklin.ur1
+tar -xf base.tar -C shanklin.ur2
+
+tar -xf base.tar -C ventnor.ur0 
+tar -xf base.tar -C ventnor.ur1 
+tar -xf base.tar -C ventnor.ur2 
+
+tar -xf base.tar -C yarmouth.ur0 
+tar -xf base.tar -C yarmouth.ur1 
+tar -xf base.tar -C yarmouth.ur2 
 
 # villages
 
-tar -xf base.tar -C adgestone
-tar -xf base.tar -C afton
-tar -xf base.tar -C alverstone
-tar -xf base.tar -C appley
-tar -xf base.tar -C apse-heath
-tar -xf base.tar -C arreton
-tar -xf base.tar -C bembridge
-tar -xf base.tar -C billingham
-tar -xf base.tar -C binfield
-tar -xf base.tar -C binstead
-tar -xf base.tar -C blackgang
-tar -xf base.tar -C blackwater
-tar -xf base.tar -C bonchurch
-tar -xf base.tar -C bouldnor
-tar -xf base.tar -C bowcombe
-tar -xf base.tar -C brighstone
-tar -xf base.tar -C brook
-tar -xf base.tar -C calbourne
-tar -xf base.tar -C carisbrooke
-tar -xf base.tar -C chale
-tar -xf base.tar -C chale-green
-tar -xf base.tar -C chillerton
-tar -xf base.tar -C cranmore
-tar -xf base.tar -C culver-down
-tar -xf base.tar -C elmfield
-tar -xf base.tar -C fishbourne
-tar -xf base.tar -C freshwater
-tar -xf base.tar -C gatcombe
-tar -xf base.tar -C godshill
-tar -xf base.tar -C great-thorness
-tar -xf base.tar -C gunville
-tar -xf base.tar -C gurnard
-tar -xf base.tar -C hale-common
-tar -xf base.tar -C hamstead
-tar -xf base.tar -C havenstreet
-tar -xf base.tar -C haylands
-tar -xf base.tar -C horringford
-tar -xf base.tar -C kingston
-tar -xf base.tar -C lake
-tar -xf base.tar -C luccombe
-tar -xf base.tar -C marks-corner
-tar -xf base.tar -C merstone
-tar -xf base.tar -C mottistone
-tar -xf base.tar -C nettlestone
-tar -xf base.tar -C newbridge
-tar -xf base.tar -C newchurch
-tar -xf base.tar -C newtown
-tar -xf base.tar -C ningwood
-tar -xf base.tar -C ninham
-tar -xf base.tar -C niton
-tar -xf base.tar -C northwood
-tar -xf base.tar -C norton-green
-tar -xf base.tar -C oakfield
-tar -xf base.tar -C porchfield
-tar -xf base.tar -C puckaster
-tar -xf base.tar -C puckpool
-tar -xf base.tar -C quarr-hill
-tar -xf base.tar -C queens-bower
-tar -xf base.tar -C rew-street
-tar -xf base.tar -C rookley-and-rookley-green
-tar -xf base.tar -C rowridge
-tar -xf base.tar -C seaview
-tar -xf base.tar -C shalcombe
-tar -xf base.tar -C shalfleet
-tar -xf base.tar -C shide
-tar -xf base.tar -C shorwell
-tar -xf base.tar -C spring-vale
-tar -xf base.tar -C st-helens
-tar -xf base.tar -C st-lawrence
-tar -xf base.tar -C swanmore
-tar -xf base.tar -C thorley
-tar -xf base.tar -C totland
-tar -xf base.tar -C wellow
-tar -xf base.tar -C whippingham
-tar -xf base.tar -C whitely-bank
-tar -xf base.tar -C whitwell
-tar -xf base.tar -C winford
-tar -xf base.tar -C wootton-and-wootton-bridge
-tar -xf base.tar -C wroxall
-tar -xf base.tar -C yaverland
+tar -xf base.tar -C adgestone.ur0
+tar -xf base.tar -C adgestone.ur1
+tar -xf base.tar -C adgestone.ur2
+
+tar -xf base.tar -C afton.ur0
+tar -xf base.tar -C afton.ur1
+tar -xf base.tar -C afton.ur2
+
+tar -xf base.tar -C alverstone.ur0
+tar -xf base.tar -C alverstone.ur1
+tar -xf base.tar -C alverstone.ur2
+
+tar -xf base.tar -C appley.ur0
+tar -xf base.tar -C appley.ur1
+tar -xf base.tar -C appley.ur2
+
+tar -xf base.tar -C apse-heath.ur0
+tar -xf base.tar -C apse-heath.ur1
+tar -xf base.tar -C apse-heath.ur2
+
+tar -xf base.tar -C arreton.ur0
+tar -xf base.tar -C arreton.ur1
+tar -xf base.tar -C arreton.ur2
+
+tar -xf base.tar -C bembridge.ur0
+tar -xf base.tar -C bembridge.ur1
+tar -xf base.tar -C bembridge.ur2
+
+tar -xf base.tar -C billingham.ur0
+tar -xf base.tar -C billingham.ur1
+tar -xf base.tar -C billingham.ur2
+
+tar -xf base.tar -C binfield.ur0
+tar -xf base.tar -C binfield.ur1
+tar -xf base.tar -C binfield.ur2
+
+tar -xf base.tar -C binstead.ur0
+tar -xf base.tar -C binstead.ur1
+tar -xf base.tar -C binstead.ur2
+
+tar -xf base.tar -C blackgang.ur0
+tar -xf base.tar -C blackgang.ur1
+tar -xf base.tar -C blackgang.ur2
+
+tar -xf base.tar -C blackwater.ur0
+tar -xf base.tar -C blackwater.ur1
+tar -xf base.tar -C blackwater.ur2
+
+tar -xf base.tar -C bonchurch.ur0
+tar -xf base.tar -C bonchurch.ur1
+tar -xf base.tar -C bonchurch.ur2
+
+tar -xf base.tar -C bouldnor.ur0
+tar -xf base.tar -C bouldnor.ur1
+tar -xf base.tar -C bouldnor.ur2
+
+tar -xf base.tar -C bowcombe.ur0
+tar -xf base.tar -C bowcombe.ur1
+tar -xf base.tar -C bowcombe.ur2
+
+tar -xf base.tar -C brighstone.ur0
+tar -xf base.tar -C brighstone.ur1
+tar -xf base.tar -C brighstone.ur2
+
+tar -xf base.tar -C brook.ur0
+tar -xf base.tar -C brook.ur1
+tar -xf base.tar -C brook.ur2
+
+tar -xf base.tar -C calbourne.ur0
+tar -xf base.tar -C calbourne.ur1
+tar -xf base.tar -C calbourne.ur2
+
+tar -xf base.tar -C carisbrooke.ur0
+tar -xf base.tar -C carisbrooke.ur1
+tar -xf base.tar -C carisbrooke.ur2
+
+tar -xf base.tar -C chale.ur0
+tar -xf base.tar -C chale.ur1
+tar -xf base.tar -C chale.ur2
+
+tar -xf base.tar -C chale-green.ur0
+tar -xf base.tar -C chale-green.ur1
+tar -xf base.tar -C chale-green.ur2
+
+tar -xf base.tar -C chillerton.ur0
+tar -xf base.tar -C chillerton.ur1
+tar -xf base.tar -C chillerton.ur2
+
+tar -xf base.tar -C cranmore.ur0
+tar -xf base.tar -C cranmore.ur1
+tar -xf base.tar -C cranmore.ur2
+
+tar -xf base.tar -C culver-down.ur0
+tar -xf base.tar -C culver-down.ur1
+tar -xf base.tar -C culver-down.ur2
+
+tar -xf base.tar -C elmfield.ur0
+tar -xf base.tar -C elmfield.ur1
+tar -xf base.tar -C elmfield.ur2
+
+tar -xf base.tar -C fishbourne.ur0
+tar -xf base.tar -C fishbourne.ur1
+tar -xf base.tar -C fishbourne.ur2
+
+tar -xf base.tar -C freshwater.ur0
+tar -xf base.tar -C freshwater.ur1
+tar -xf base.tar -C freshwater.ur2
+
+tar -xf base.tar -C gatcombe.ur0
+tar -xf base.tar -C gatcombe.ur1
+tar -xf base.tar -C gatcombe.ur2
+
+tar -xf base.tar -C godshill.ur0
+tar -xf base.tar -C godshill.ur1
+tar -xf base.tar -C godshill.ur2
+
+tar -xf base.tar -C great-thorness.ur0
+tar -xf base.tar -C great-thorness.ur1
+tar -xf base.tar -C great-thorness.ur2
+
+tar -xf base.tar -C gunville.ur0
+tar -xf base.tar -C gunville.ur1
+tar -xf base.tar -C gunville.ur2
+
+tar -xf base.tar -C gurnard.ur0
+tar -xf base.tar -C gurnard.ur1
+tar -xf base.tar -C gurnard.ur2
+
+tar -xf base.tar -C hale-common.ur0
+tar -xf base.tar -C hale-common.ur1
+tar -xf base.tar -C hale-common.ur2
+
+tar -xf base.tar -C hamstead.ur0
+tar -xf base.tar -C hamstead.ur1
+tar -xf base.tar -C hamstead.ur2
+
+tar -xf base.tar -C havenstreet.ur0
+tar -xf base.tar -C havenstreet.ur1
+tar -xf base.tar -C havenstreet.ur2
+
+tar -xf base.tar -C haylands.ur0
+tar -xf base.tar -C haylands.ur1
+tar -xf base.tar -C haylands.ur2
+
+tar -xf base.tar -C horringford.ur0
+tar -xf base.tar -C horringford.ur1
+tar -xf base.tar -C horringford.ur2
+
+tar -xf base.tar -C kingston.ur0
+tar -xf base.tar -C kingston.ur1
+tar -xf base.tar -C kingston.ur2
+
+tar -xf base.tar -C lake.ur0
+tar -xf base.tar -C lake.ur1
+tar -xf base.tar -C lake.ur2
+
+tar -xf base.tar -C luccombe.ur0
+tar -xf base.tar -C luccombe.ur1
+tar -xf base.tar -C luccombe.ur2
+
+tar -xf base.tar -C marks-corner.ur0
+tar -xf base.tar -C marks-corner.ur1
+tar -xf base.tar -C marks-corner.ur2
+
+tar -xf base.tar -C merstone.ur0
+tar -xf base.tar -C merstone.ur1
+tar -xf base.tar -C merstone.ur2
+
+tar -xf base.tar -C mottistone.ur0
+tar -xf base.tar -C mottistone.ur1
+tar -xf base.tar -C mottistone.ur2
+
+tar -xf base.tar -C nettlestone.ur0
+tar -xf base.tar -C nettlestone.ur1
+tar -xf base.tar -C nettlestone.ur2
+
+tar -xf base.tar -C newbridge.ur0
+tar -xf base.tar -C newbridge.ur1
+tar -xf base.tar -C newbridge.ur2
+
+tar -xf base.tar -C newchurch.ur0
+tar -xf base.tar -C newchurch.ur1
+tar -xf base.tar -C newchurch.ur2
+
+tar -xf base.tar -C newtown.ur0
+tar -xf base.tar -C newtown.ur1
+tar -xf base.tar -C newtown.ur2
+
+tar -xf base.tar -C ningwood.ur0
+tar -xf base.tar -C ningwood.ur1
+tar -xf base.tar -C ningwood.ur2
+
+tar -xf base.tar -C ninham.ur0
+tar -xf base.tar -C ninham.ur1
+tar -xf base.tar -C ninham.ur2
+
+tar -xf base.tar -C niton.ur0
+tar -xf base.tar -C niton.ur1
+tar -xf base.tar -C niton.ur2
+
+tar -xf base.tar -C northwood.ur0
+tar -xf base.tar -C northwood.ur1
+tar -xf base.tar -C northwood.ur2
+
+tar -xf base.tar -C norton-green.ur0
+tar -xf base.tar -C norton-green.ur1
+tar -xf base.tar -C norton-green.ur2
+
+tar -xf base.tar -C oakfield.ur0
+tar -xf base.tar -C oakfield.ur1
+tar -xf base.tar -C oakfield.ur2
+
+tar -xf base.tar -C porchfield.ur0
+tar -xf base.tar -C porchfield.ur1
+tar -xf base.tar -C porchfield.ur2
+
+tar -xf base.tar -C puckaster.ur0
+tar -xf base.tar -C puckaster.ur1
+tar -xf base.tar -C puckaster.ur2
+
+tar -xf base.tar -C puckpool.ur0
+tar -xf base.tar -C puckpool.ur1
+tar -xf base.tar -C puckpool.ur2
+
+tar -xf base.tar -C quarr-hill.ur0
+tar -xf base.tar -C quarr-hill.ur1
+tar -xf base.tar -C quarr-hill.ur2
+
+tar -xf base.tar -C queens-bower.ur0
+tar -xf base.tar -C queens-bower.ur1
+tar -xf base.tar -C queens-bower.ur2
+
+tar -xf base.tar -C rew-street.ur0
+tar -xf base.tar -C rew-street.ur1
+tar -xf base.tar -C rew-street.ur2
+
+tar -xf base.tar -C rookley-and-rookley-green.ur0
+tar -xf base.tar -C rookley-and-rookley-green.ur1
+tar -xf base.tar -C rookley-and-rookley-green.ur2
+
+tar -xf base.tar -C rowridge.ur0
+tar -xf base.tar -C rowridge.ur1
+tar -xf base.tar -C rowridge.ur2
+
+tar -xf base.tar -C seaview.ur0
+tar -xf base.tar -C seaview.ur1
+tar -xf base.tar -C seaview.ur2
+
+tar -xf base.tar -C shalcombe.ur0
+tar -xf base.tar -C shalcombe.ur1
+tar -xf base.tar -C shalcombe.ur2
+
+tar -xf base.tar -C shalfleet.ur0
+tar -xf base.tar -C shalfleet.ur1
+tar -xf base.tar -C shalfleet.ur2
+
+tar -xf base.tar -C shide.ur0
+tar -xf base.tar -C shide.ur1
+tar -xf base.tar -C shide.ur2
+
+tar -xf base.tar -C shorwell.ur0
+tar -xf base.tar -C shorwell.ur1
+tar -xf base.tar -C shorwell.ur2
+
+tar -xf base.tar -C spring-vale.ur0
+tar -xf base.tar -C spring-vale.ur1
+tar -xf base.tar -C spring-vale.ur2
+
+tar -xf base.tar -C st-helens.ur0
+tar -xf base.tar -C st-helens.ur1
+tar -xf base.tar -C st-helens.ur2
+
+tar -xf base.tar -C st-lawrence.ur0
+tar -xf base.tar -C st-lawrence.ur1
+tar -xf base.tar -C st-lawrence.ur2
+
+tar -xf base.tar -C swanmore.ur0
+tar -xf base.tar -C swanmore.ur1
+tar -xf base.tar -C swanmore.ur2
+
+tar -xf base.tar -C thorley.ur0
+tar -xf base.tar -C thorley.ur1
+tar -xf base.tar -C thorley.ur2
+
+tar -xf base.tar -C totland.ur0
+tar -xf base.tar -C totland.ur1
+tar -xf base.tar -C totland.ur2
+
+tar -xf base.tar -C wellow.ur0
+tar -xf base.tar -C wellow.ur1
+tar -xf base.tar -C wellow.ur2
+
+tar -xf base.tar -C whippingham.ur0
+tar -xf base.tar -C whippingham.ur1
+tar -xf base.tar -C whippingham.ur2
+
+tar -xf base.tar -C whitely-bank.ur0
+tar -xf base.tar -C whitely-bank.ur1
+tar -xf base.tar -C whitely-bank.ur2
+
+tar -xf base.tar -C whitwell.ur0
+tar -xf base.tar -C whitwell.ur1
+tar -xf base.tar -C whitwell.ur2
+
+tar -xf base.tar -C winford.ur0
+tar -xf base.tar -C winford.ur1
+tar -xf base.tar -C winford.ur2
+
+tar -xf base.tar -C wootton-and-wootton-bridge.ur0
+tar -xf base.tar -C wootton-and-wootton-bridge.ur1
+tar -xf base.tar -C wootton-and-wootton-bridge.ur2
+
+tar -xf base.tar -C wroxall.ur0
+tar -xf base.tar -C wroxall.ur1
+tar -xf base.tar -C wroxall.ur2
+
+tar -xf base.tar -C yaverland.ur0
+tar -xf base.tar -C yaverland.ur1
+tar -xf base.tar -C yaverland.ur2
+
+
 
 # towns - how to monitor traffic through a bridge?
 
