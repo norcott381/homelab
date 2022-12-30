@@ -21,6 +21,371 @@ jail_list=""
 
 ----------------------------------------------------------
 
+zfs create zroot/jails
+zfs set mountpoint=/jails zroot/jails
+
+zfs create zroot/jails/base
+
+zfs create zroot/jails/newport.ur0
+zfs create zroot/jails/newport.ur1
+zfs create zroot/jails/newport.ur2
+
+zfs create zroot/jails/brading.ur0 
+zfs create zroot/jails/brading.ur1 
+zfs create zroot/jails/brading.ur2 
+
+zfs create zroot/jails/cowes.ur0 
+zfs create zroot/jails/cowes.ur1
+zfs create zroot/jails/cowes.ur2
+
+zfs create zroot/jails/east-cowes.ur0
+zfs create zroot/jails/east-cowes.ur1
+zfs create zroot/jails/east-cowes.ur2
+
+zfs create zroot/jails/ryde.ur0 
+zfs create zroot/jails/ryde.ur1
+zfs create zroot/jails/ryde.ur2
+
+zfs create zroot/jails/sandown.ur0
+zfs create zroot/jails/sandown.ur1
+zfs create zroot/jails/sandown.ur2
+
+zfs create zroot/jails/shanklin.ur0 
+zfs create zroot/jails/shanklin.ur1
+zfs create zroot/jails/shanklin.ur2
+
+zfs create zroot/jails/ventnor.ur0 
+zfs create zroot/jails/ventnor.ur1
+zfs create zroot/jails/ventnor.ur2 
+
+zfs create zroot/jails/yarmouth.ur0 
+zfs create zroot/jails/yarmouth.ur1 
+zfs create zroot/jails/yarmouth.ur2 
+
+# villages
+
+zfs create zroot/jails/adgestone.ur0
+zfs create zroot/jails/adgestone.ur1
+zfs create zroot/jails/adgestone.ur2
+
+zfs create zroot/jails/afton.ur0
+zfs create zroot/jails/afton.ur1
+zfs create zroot/jails/afton.ur2
+
+zfs create zroot/jails/alverstone.ur0
+zfs create zroot/jails/alverstone.ur1
+zfs create zroot/jails/alverstone.ur2
+
+zfs create zroot/jails/appley.ur0
+zfs create zroot/jails/appley.ur1
+zfs create zroot/jails/appley.ur2
+
+zfs create zroot/jails/apse-heath.ur0
+zfs create zroot/jails/apse-heath.ur1
+zfs create zroot/jails/apse-heath.ur2
+
+zfs create zroot/jails/arreton.ur0
+zfs create zroot/jails/arreton.ur1
+zfs create zroot/jails/arreton.ur2
+
+zfs create zroot/jails/bembridge.ur0
+zfs create zroot/jails/bembridge.ur1
+zfs create zroot/jails/bembridge.ur2
+
+zfs create zroot/jails/billingham.ur0
+zfs create zroot/jails/billingham.ur1
+zfs create zroot/jails/billingham.ur2
+
+zfs create zroot/jails/binfield.ur0
+zfs create zroot/jails/binfield.ur1
+zfs create zroot/jails/binfield.ur2
+
+zfs create zroot/jails/binstead.ur0
+zfs create zroot/jails/binstead.ur1
+zfs create zroot/jails/binstead.ur2
+
+zfs create zroot/jails/blackgang.ur0
+zfs create zroot/jails/blackgang.ur1
+zfs create zroot/jails/blackgang.ur2
+
+zfs create zroot/jails/blackwater.ur0
+zfs create zroot/jails/blackwater.ur1
+zfs create zroot/jails/blackwater.ur2
+
+zfs create zroot/jails/bonchurch.ur0
+zfs create zroot/jails/bonchurch.ur1
+zfs create zroot/jails/bonchurch.ur2
+
+zfs create zroot/jails/bouldnor.ur0
+zfs create zroot/jails/bouldnor.ur1
+zfs create zroot/jails/bouldnor.ur2
+
+zfs create zroot/jails/bowcombe.ur0
+zfs create zroot/jails/bowcombe.ur1
+zfs create zroot/jails/bowcombe.ur2
+
+zfs create zroot/jails/brighstone.ur0
+zfs create zroot/jails/brighstone.ur1
+zfs create zroot/jails/brighstone.ur2
+
+zfs create zroot/jails/brook.ur0
+zfs create zroot/jails/brook.ur1
+zfs create zroot/jails/brook.ur2
+
+zfs create zroot/jails/calbourne.ur0
+zfs create zroot/jails/calbourne.ur1
+zfs create zroot/jails/calbourne.ur2
+
+zfs create zroot/jails/carisbrooke.ur0
+zfs create zroot/jails/carisbrooke.ur1
+zfs create zroot/jails/carisbrooke.ur2
+
+zfs create zroot/jails/chale.ur0
+zfs create zroot/jails/chale.ur1
+zfs create zroot/jails/chale.ur2
+
+zfs create zroot/jails/chale-green.ur0
+zfs create zroot/jails/chale-green.ur1
+zfs create zroot/jails/chale-green.ur2
+
+zfs create zroot/jails/chillerton.ur0
+zfs create zroot/jails/chillerton.ur1
+zfs create zroot/jails/chillerton.ur2
+
+zfs create zroot/jails/cranmore.ur0
+zfs create zroot/jails/cranmore.ur1
+zfs create zroot/jails/cranmore.ur2
+
+zfs create zroot/jails/culver-down.ur0
+zfs create zroot/jails/culver-down.ur1
+zfs create zroot/jails/culver-down.ur2
+
+zfs create zroot/jails/elmfield.ur0
+zfs create zroot/jails/elmfield.ur1
+zfs create zroot/jails/elmfield.ur2
+
+zfs create zroot/jails/fishbourne.ur0
+zfs create zroot/jails/fishbourne.ur1
+zfs create zroot/jails/fishbourne.ur2
+
+zfs create zroot/jails/freshwater.ur0
+zfs create zroot/jails/freshwater.ur1
+zfs create zroot/jails/freshwater.ur2
+
+zfs create zroot/jails/gatcombe.ur0
+zfs create zroot/jails/gatcombe.ur1
+zfs create zroot/jails/gatcombe.ur2
+
+zfs create zroot/jails/godshill.ur0
+zfs create zroot/jails/godshill.ur1
+zfs create zroot/jails/godshill.ur2
+
+zfs create zroot/jails/great-thorness.ur0
+zfs create zroot/jails/great-thorness.ur1
+zfs create zroot/jails/great-thorness.ur2
+
+zfs create zroot/jails/gunville.ur0
+zfs create zroot/jails/gunville.ur1
+zfs create zroot/jails/gunville.ur2
+
+zfs create zroot/jails/gurnard.ur0
+zfs create zroot/jails/gurnard.ur1
+zfs create zroot/jails/gurnard.ur2
+
+zfs create zroot/jails/hale-common.ur0
+zfs create zroot/jails/hale-common.ur1
+zfs create zroot/jails/hale-common.ur2
+
+zfs create zroot/jails/hamstead.ur0
+zfs create zroot/jails/hamstead.ur1
+zfs create zroot/jails/hamstead.ur2
+
+zfs create zroot/jails/havenstreet.ur0
+zfs create zroot/jails/havenstreet.ur1
+zfs create zroot/jails/havenstreet.ur2
+
+zfs create zroot/jails/haylands.ur0
+zfs create zroot/jails/haylands.ur1
+zfs create zroot/jails/haylands.ur2
+
+zfs create zroot/jails/horringford.ur0
+zfs create zroot/jails/horringford.ur1
+zfs create zroot/jails/horringford.ur2
+
+zfs create zroot/jails/kingston.ur0
+zfs create zroot/jails/kingston.ur1
+zfs create zroot/jails/kingston.ur2
+
+zfs create zroot/jails/lake.ur0
+zfs create zroot/jails/lake.ur1
+zfs create zroot/jails/lake.ur2
+
+zfs create zroot/jails/luccombe.ur0
+zfs create zroot/jails/luccombe.ur1
+zfs create zroot/jails/luccombe.ur2
+
+zfs create zroot/jails/marks-corner.ur0
+zfs create zroot/jails/marks-corner.ur1
+zfs create zroot/jails/marks-corner.ur2
+
+zfs create zroot/jails/merstone.ur0
+zfs create zroot/jails/merstone.ur1
+zfs create zroot/jails/merstone.ur2
+
+zfs create zroot/jails/mottistone.ur0
+zfs create zroot/jails/mottistone.ur1
+zfs create zroot/jails/mottistone.ur2
+
+zfs create zroot/jails/nettlestone.ur0
+zfs create zroot/jails/nettlestone.ur1
+zfs create zroot/jails/nettlestone.ur2
+
+zfs create zroot/jails/newbridge.ur0
+zfs create zroot/jails/newbridge.ur1
+zfs create zroot/jails/newbridge.ur2
+
+zfs create zroot/jails/newchurch.ur0
+zfs create zroot/jails/newchurch.ur1
+zfs create zroot/jails/newchurch.ur2
+
+zfs create zroot/jails/newtown.ur0
+zfs create zroot/jails/newtown.ur1
+zfs create zroot/jails/newtown.ur2
+
+zfs create zroot/jails/ningwood.ur0
+zfs create zroot/jails/ningwood.ur1
+zfs create zroot/jails/ningwood.ur2
+
+zfs create zroot/jails/ninham.ur0
+zfs create zroot/jails/ninham.ur1
+zfs create zroot/jails/ninham.ur2
+
+zfs create zroot/jails/niton.ur0
+zfs create zroot/jails/niton.ur1
+zfs create zroot/jails/niton.ur2
+
+zfs create zroot/jails/northwood.ur0
+zfs create zroot/jails/northwood.ur1
+zfs create zroot/jails/northwood.ur2
+
+zfs create zroot/jails/norton-green.ur0
+zfs create zroot/jails/norton-green.ur1
+zfs create zroot/jails/norton-green.ur2
+
+zfs create zroot/jails/oakfield.ur0
+zfs create zroot/jails/oakfield.ur1
+zfs create zroot/jails/oakfield.ur2
+
+zfs create zroot/jails/porchfield.ur0
+zfs create zroot/jails/porchfield.ur1
+zfs create zroot/jails/porchfield.ur2
+
+zfs create zroot/jails/puckaster.ur0
+zfs create zroot/jails/puckaster.ur1
+zfs create zroot/jails/puckaster.ur2
+
+zfs create zroot/jails/puckpool.ur0
+zfs create zroot/jails/puckpool.ur1
+zfs create zroot/jails/puckpool.ur2
+
+zfs create zroot/jails/quarr-hill.ur0
+zfs create zroot/jails/quarr-hill.ur1
+zfs create zroot/jails/quarr-hill.ur2
+
+zfs create zroot/jails/queens-bower.ur0
+zfs create zroot/jails/queens-bower.ur1
+zfs create zroot/jails/queens-bower.ur2
+
+zfs create zroot/jails/rew-street.ur0
+zfs create zroot/jails/rew-street.ur1
+zfs create zroot/jails/rew-street.ur2
+
+zfs create zroot/jails/rookley-and-rookley-green.ur0
+zfs create zroot/jails/rookley-and-rookley-green.ur1
+zfs create zroot/jails/rookley-and-rookley-green.ur2
+
+zfs create zroot/jails/rowridge.ur0
+zfs create zroot/jails/rowridge.ur1
+zfs create zroot/jails/rowridge.ur2
+
+zfs create zroot/jails/seaview.ur0
+zfs create zroot/jails/seaview.ur1
+zfs create zroot/jails/seaview.ur2
+
+zfs create zroot/jails/shalcombe.ur0
+zfs create zroot/jails/shalcombe.ur1
+zfs create zroot/jails/shalcombe.ur2
+
+zfs create zroot/jails/shalfleet.ur0
+zfs create zroot/jails/shalfleet.ur1
+zfs create zroot/jails/shalfleet.ur2
+
+zfs create zroot/jails/shide.ur0
+zfs create zroot/jails/shide.ur1
+zfs create zroot/jails/shide.ur2
+
+zfs create zroot/jails/shorwell.ur0
+zfs create zroot/jails/shorwell.ur1
+zfs create zroot/jails/shorwell.ur2
+
+zfs create zroot/jails/spring-vale.ur0
+zfs create zroot/jails/spring-vale.ur1
+zfs create zroot/jails/spring-vale.ur2
+
+zfs create zroot/jails/st-helens.ur0
+zfs create zroot/jails/st-helens.ur1
+zfs create zroot/jails/st-helens.ur2
+
+zfs create zroot/jails/st-lawrence.ur0
+zfs create zroot/jails/st-lawrence.ur1
+zfs create zroot/jails/st-lawrence.ur2
+
+zfs create zroot/jails/swanmore.ur0
+zfs create zroot/jails/swanmore.ur1
+zfs create zroot/jails/swanmore.ur2
+
+zfs create zroot/jails/thorley.ur0
+zfs create zroot/jails/thorley.ur1
+zfs create zroot/jails/thorley.ur2
+
+zfs create zroot/jails/totland.ur0
+zfs create zroot/jails/totland.ur1
+zfs create zroot/jails/totland.ur2
+
+zfs create zroot/jails/wellow.ur0
+zfs create zroot/jails/wellow.ur1
+zfs create zroot/jails/wellow.ur2
+
+zfs create zroot/jails/whippingham.ur0
+zfs create zroot/jails/whippingham.ur1
+zfs create zroot/jails/whippingham.ur2
+
+zfs create zroot/jails/whitely-bank.ur0
+zfs create zroot/jails/whitely-bank.ur1
+zfs create zroot/jails/whitely-bank.ur2
+
+zfs create zroot/jails/whitwell.ur0
+zfs create zroot/jails/whitwell.ur1
+zfs create zroot/jails/whitwell.ur2
+
+zfs create zroot/jails/winford.ur0
+zfs create zroot/jails/winford.ur1
+zfs create zroot/jails/winford.ur2
+
+zfs create zroot/jails/wootton-and-wootton-bridge.ur0
+zfs create zroot/jails/wootton-and-wootton-bridge.ur1
+zfs create zroot/jails/wootton-and-wootton-bridge.ur2
+
+zfs create zroot/jails/wroxall.ur0
+zfs create zroot/jails/wroxall.ur1
+zfs create zroot/jails/wroxall.ur2
+
+zfs create zroot/jails/yaverland.ur0
+zfs create zroot/jails/yaverland.ur1
+zfs create zroot/jails/yaverland.ur2
+
+
+
 # create jails
 
 mkdir jails
@@ -31,6 +396,7 @@ mkdir base
 bsdinstall jail base
 cd base
 tar -cvf ../base.tar *
+cd ..
 
 # create directorys
 
@@ -394,7 +760,7 @@ mkdir yaverland.ur0
 mkdir yaverland.ur1
 mkdir yaverland.ur2
 
-
+# quicker to copy directory? or untar it?
 # populate
 # towns
 
@@ -759,6 +1125,8 @@ tar -xf base.tar -C yaverland.ur2
 
 
 # towns - how to monitor traffic through a bridge?
+# need ability to setup diffrent networks etc, 
+# install diffrent software
 
 ifconfig bridge create name newport.ex0 
 ifconfig bridge create name brading.ex0  
